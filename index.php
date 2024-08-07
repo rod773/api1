@@ -5,13 +5,10 @@ $path =  parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
 
 $parts = explode("/",$path);
 
+$api_name = basename(dirname(__FILE__));
 
+$key = array_search($api_name,$parts);
 
-$key = array_search('api', $parts)+1; 
+$resource  = $parts[$key +1] ?? null;
 
-
-$resource = $parts[$key];
-
-$id = $parts[$key+1] ?? null;
-
-echo $resource."/".$id;
+$id = $parts[$key +2] ?? null;
