@@ -15,7 +15,7 @@ class Database{
 
         $dsn =  "mysql:host={$this->host};db_name={$this->name};charset=utf8";
 
-        new PDO($dsn,$this->user,$this->password,[
+        return new PDO($dsn,$this->user,$this->password,[
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXECPTION
         ]);
      }
