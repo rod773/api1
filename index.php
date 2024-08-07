@@ -28,6 +28,8 @@ if($resource  !='task'){
 
 $database = new Database("localhost","wordpress1","root","");
 
+$database->getConnection();
+
 $controller = new TaskController;
 
 $method = $_SERVER['REQUEST_METHOD'];
