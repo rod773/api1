@@ -7,9 +7,11 @@ class TaskController{
 
         if($id ==  null){
             echo "index";
+            
         }
         elseif($method == 'POST'){
             echo "create";
+            
         }
         else{
             switch($method){

@@ -24,7 +24,7 @@ if($resource  !='task'){
    exit;
 }
 
-header("content-type: aplcation/json; charsset=UTF-8");
+//header("Content-type: aplcation/json; charset=UTF-8");
 
 $database = new Database("localhost","wordpress1","root","");
 
