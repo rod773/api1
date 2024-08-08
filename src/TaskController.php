@@ -18,6 +18,7 @@ class TaskController{
                 case 'GET':
                     echo "show $id";
                     break;
+                    
                 case 'PATCH':
                     echo "update $id";
                     break;

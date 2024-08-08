@@ -3,7 +3,11 @@
 
 require __DIR__."/vendor/autoload.php";
 
-set_exception_handler("ErrorHandler::handlerException");
+set_exception_handler("ErrorHandler::handleException");
+
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
+
+$dotenv->load();
 
 
 $path =  parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
