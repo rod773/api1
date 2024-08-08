@@ -13,9 +13,11 @@ class Database{
 
      public function getConnection(){
 
-        $dsn =  "mysql:host={$this->host};db_name={$this->name};charset=utf8";
+       
 
-        return new PDO($dsn,$this->user,$this->password,[
+        $dsn = "mysql:dbname=$this->name;host=$this->host";
+
+        return new PDO($dsn, $this->user, $this->password,[
             PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
         ]);
      }
