@@ -12,7 +12,9 @@ class TaskGateway{
 
         $sql = "SELECT * FROM TASK ORDER BY NAME";
 
-        $this->conn->query($sql);
+        $stmt = $this->conn->query($sql);
+
+        $stmt -> fetchAll();
         
     }
 }
