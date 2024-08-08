@@ -16,7 +16,7 @@ class TaskController{
                 
             }
             else{
-                $this->respondMethodNotAllowed('GET','POST');
+                $this->respondMethodNotAllowed('GET, POST');
             }
             
         }
@@ -39,6 +39,12 @@ class TaskController{
         }
 
         
+    }
+
+
+     private function responseMethodNotAllowed(string $allowed_methods) {
+        http_response_code(405);
+        header("Allow: GET, POST");
     }
     
 }
