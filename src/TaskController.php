@@ -12,7 +12,7 @@ class TaskController{
         if($id ==  null){
 
             if($method == 'GET'){
-                $this->gateway->getAll();
+                echo json_encode($this->gateway->getAll());
             }
            
             elseif($method == 'POST'){
