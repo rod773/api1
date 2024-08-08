@@ -16,7 +16,7 @@ class TaskController{
                 
             }
             else{
-                $this->respondMethodNotAllowed();
+                $this->respondMethodNotAllowed('GET','POST');
             }
             
         }
