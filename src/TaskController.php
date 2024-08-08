@@ -19,7 +19,11 @@ class TaskController{
                     echo "show $id";
                     break;
                 case 'PATCH':
-                    echo "show $id";
+                    echo "update $id";
+                    break;
+                
+                case 'DELETE':
+                    echo "delete $id";
                     break;
 
             }
