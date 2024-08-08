@@ -3,6 +3,8 @@
 
 require __DIR__."/vendor/autoload.php";
 
+set_exception_handler("ErrorHandler::handlerException");
+
 
 $path =  parse_url($_SERVER['REQUEST_URI'],PHP_URL_PATH);
 
