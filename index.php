@@ -33,7 +33,7 @@ if($resource  !='task'){
 
 //header("Content-type: aplcation/json; charset=UTF-8");
 
-$database = new Database("localhost","wordpress1","root","");
+$database = new Database($_ENV['DB_HOST'],($_ENV['DB_NAME']),($_ENV['DB_USER']),($_ENV['DB_PASS']));
 
 $database->getConnection();
 
