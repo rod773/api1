@@ -14,7 +14,7 @@ class TaskGateway{
 
         $stmt = $this->conn->query($sql);
 
-        $stmt -> fetchAll();
+        return $stmt -> fetchAll(PDO::FETCH_ASSOC);
         
     }
 }

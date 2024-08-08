@@ -12,7 +12,7 @@ class TaskController{
         if($id ==  null){
 
             if($method == 'GET'){
-                echo "index"; 
+                $this->gateway->getAll();
             }
            
             elseif($method == 'POST'){
