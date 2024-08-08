@@ -3,6 +3,10 @@
 
 class TaskController{
 
+    public function __construct(private TaskGateway $gateway){
+        
+    }
+
     public function processRequest($method,$id){
 
         if($id ==  null){

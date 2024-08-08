@@ -1,7 +1,10 @@
 <?php
 
 class TaskGateway{
-    public function __construct(Database $database){
 
+    private $conn;
+    
+    public function __construct(Database $database){
+       $this->conn = $database->getConnection();
     }
 }
